@@ -1,0 +1,112 @@
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">MyWebsite</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pages/about.html">about_ust</a></li>
+      <li><a href="pages/services.html">Services</a></li>
+      <li><a href="advise.html">advice</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="job_category.html">Team</a></li>
+      <li><a href="job_details.html">FAQ</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+  </div>
+</nav>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .navbar {
+    background: linear-gradient(90deg, #007bff, #00d4ff);
+    padding: 15px 20px;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+  }
+
+  .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0 15px;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: #f1f1f1;
+  }
+
+  .menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: rgba(0, 123, 255, 0.9);
+      width: 200px;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+    }
+
+    .nav-links li {
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  function toggleMenu() {
+    const nav = document.querySelector(".nav-links");
+    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+  }
+</script>
