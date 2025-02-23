@@ -6,14 +6,95 @@
     <title>Vacency</title>
     <link rel="stylesheet" href="../styles.css" />
     <script defer src="../script.js"></script>
+
+
   </head>
   <body>
     <div id="nav-container"></div>
 
     <main>
-      <h1>vacency</h1>
-      <p>This is the vacency page.</p>
-    </main>
-    <footer>© 2023 group 5 demo project. All Rights Reserved.</footer>
+      <h1>
+        &#129333 Top Jobs is the best way to post your jobs.
+    </h1><br><br>
+
+     
+      <h2>Select your job category here: &#x1F447</h2>
+    <br>
+
+    <select name="job-category" id="job-category" style="width: 80%; background-color: aqua;" onchange="updateJobTitles()">
+        <option value="it">Information Technology  &#128187</option>
+        <option value="finance">Finance &#128176</option>
+        <option value="healthcare">Healthcare &#127973</option>
+        <option value="education">Education &#127979</option>
+        <option value="engineering">Engineering &#128736</option>
+    </select><br><br>
+
+    <h2>
+        Select your job title here &#x1F447
+    </h2><br>
+
+    <select name="job-title" id="job-title" style="width: 80%; background-color: aqua;">
+        <option value="" disabled selected>First select job category</option>
+    </select><br><br>
+
+    <h2>
+        Place minimum requirements for your job &#x1F447
+    </h2><br>
+<div class="container">
+    <div class="item">
+        <h3>Working experience by years</h3>
+        <input type="number" name="experience" id="experience" placeholder="Years of experience" style="width: 100%; background-color: aqua;">
+    </div>
+
+    <div class="item">
+        <h3>Education qualifications</h3>
+        <input type="text" name="education" id="education" placeholder="Add educational requirements" style="width: 100%; background-color: aqua;">
+    </div>
+
+    <div class="item">
+        <h3>Special Skills</h3>
+        <input type="text" name="skills" id="skills" placeholder="Add Skills" style="width: 100%; background-color: aqua;">
+    </div>
+
+    <div class="item">
+        <h3>Salary range</h3>
+        <select name="sallery" id="job-sallery" style="width: 100%; background-color: aqua;" onchange="checkSalaryRange()">
+            <option value="1">RS 10,000 - RS 20,000</option>
+            <option value="2">RS 20,000 - RS 30,000</option>
+            <option value="3">Rs 30,000 - Rs 40,000</option>
+            <option value="4">Rs 40,000 - Rs 50,000</option>
+            <option value="5">More than RS 50,000</option>
+        </select>
+        <input type="text" id="custom-salary" placeholder="Enter custom salary" style="width: 100%; background-color: aqua; display: none; margin-top: 5px;">
+    </div>
+    <div class="item">
+        <h3>Age range</h3>
+        <select name="age" id="selectage" style="width: 100%; background-color: aqua;" onchange="ageRange()">
+            <option value="1">18 - 20</option>
+            <option value="2">20 - 30</option>
+            <option value="3">other</option>
+            
+        </select>
+        <input type="text" id="custom-age" placeholder="Enter custom age" style="width: 100%; background-color: aqua; display: none; margin-top: 5px;">
+        
+
+    </div>
+    
+</div><br><br>
+
+<h2>Give additional description about your job &#x1F447</h2>
+<textarea id="comments" name="comments" rows="10" cols="100" placeholder="Enter your additional description"></textarea>
+<button type="submit" style="background-color: aqua; padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer;"onclick="showPopup(event)">Submit</button>
+<button type="reset" style="background-color: aqua; padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer;"onclick="showConfirmation(event)">Reset</button>
+<button type="cancel" style="background-color: aqua; padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer;" onclick="cancled(event)">Cancel</button>
+
+
+    </main><br><br>
+    <marquee class="blink"><p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"> 
+      Posting job vacancies on the Top Jobs website offers several benefits. Firstly, it provides access to a wide and diverse user base, increasing the chances of finding the right candidate. The platform is user-friendly, making it easy to post job listings and manage applications. Advanced search filters allow employers to find candidates that meet specific criteria, such as skills and experience. Additionally, Job Pool is cost-effective, providing competitive pricing for job postings. It also enhances brand visibility, as potential candidates become more familiar with your company. Comprehensive candidate profiles, including resumes and portfolios, facilitate the assessment of qualifications. Efficient communication through messaging and notifications streamlines the hiring process. Lastly, data analytics help employers track the performance of their job postings and make informed recruitment decisions. Overall, using Job Pool simplifies the recruitment process and helps in finding the best talent for your organization.
+  
+  </p> </marquee>
+   
+    <footer> © 2023 group 5 demo project. All Rights Reserved.  </footer>
   </body>
 </html>
