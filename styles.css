@@ -82,3 +82,11 @@
       display: block;
     }
   }
+  footer {
+    position:absolute;
+    bottom: 0;
+    text-align: center;
+    background-color: rgb(91, 88, 84);
+    padding: 5px;
+    width: 100%;
+  }
