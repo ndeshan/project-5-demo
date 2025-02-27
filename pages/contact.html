@@ -6,13 +6,106 @@
     <title>Contact</title>
     <link rel="stylesheet" href="../styles.css" />
     <script defer src="../script.js"></script>
+    <style>
+      .contact_section {
+        margin: 0%;
+        text-align: left;
+      }
+      .contact_table {
+        text-align: center;
+        margin: 20px 350px;
+
+        height: 500px;
+        width: 50%;
+      }
+      .contact_input {
+        width: 50%;
+        padding: 10px;
+        border: 0;
+        border-bottom: 1px solid black;
+      }
+      .contact_textarea {
+        width: 50%;
+        padding: 10px;
+        border: 0;
+
+        border-bottom: 1px solid black;
+      }
+      .contact_button {
+        background-color: red;
+        color: aliceblue;
+        font-size: xx-large;
+        font-weight: bold;
+        border: 0;
+        font-family: Arial, sans-serif;
+        border-radius: 20px;
+        border-style: double;
+        padding: 10px 20px;
+      }
+      .contact_button:hover {
+        background-color: blue;
+      }
+      .contact_h1 {
+        text-align: left;
+        font-size: 50px;
+        font-weight: 800;
+      }
+    </style>
   </head>
   <body>
     <div id="nav-container"></div>
 
     <main>
-      <h1>contact</h1>
-      <p>This is the contact page.</p>
+      <section class="contact_section">
+        <h1 class="contact_h1">contact</h1>
+        <div>
+          <table class="contact_table">
+            <tr>
+              <th>
+                <input
+                  type="text"
+                  class="contact_input"
+                  placeholder="Name"
+                  name="text"
+                />
+              </th>
+            </tr>
+            <tr>
+              <th>
+                <input
+                  type="text"
+                  name="text"
+                  class="contact_input"
+                  placeholder="Email"
+                />
+              </th>
+            </tr>
+            <tr>
+              <th>
+                <input
+                  type="text"
+                  name="text"
+                  placeholder="phone number"
+                  class="contact_input"
+                />
+              </th>
+            </tr>
+            <tr>
+              <th>
+                <textarea
+                  name="massege"
+                  class="contact_textarea"
+                  placeholder="massege"
+                  rows="5"
+                ></textarea>
+              </th>
+            </tr>
+            <tr>
+              <th><button class="contact_button">send</button></th>
+            </tr>
+          </table>
+        </div>
+      </section>
     </main>
     <footer>© 2023 group 5 demo project. All Rights Reserved.</footer>
   </body>
